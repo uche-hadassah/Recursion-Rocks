@@ -7,12 +7,12 @@ using namespace std;
 
 int SumEvenSq(int n)
 {
-	if (n % 2 != 0)
-		n - 1;
-	if (n == 2)
-		return n * n;
+	if (n <= 0)
+		return 0;
+	else if (n % 2 == 0)
+		return n * n + SumEvenSq(n - 2);
 	else
-		return SumEvenSq(n - 2) + SumEvenSq(n);
+		return SumEvenSq(n - 1);
 }
 int main()
 {
