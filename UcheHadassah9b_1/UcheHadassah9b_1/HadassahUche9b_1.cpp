@@ -7,7 +7,10 @@ void print(char str[], int n)
 	if (n == 1)
 		cout << str;
 	else
+	{
+		cout << str << endl;
 		return print(str, n - 1);
+	}
 }
 int main()
 {
