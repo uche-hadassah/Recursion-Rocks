@@ -1,21 +1,21 @@
-/*Write a recursive function that takes as a parameter an integer n and returns the sum 
-of even squares of integers from 0 to n inclusive. For example: SumEvenSq(7) should 
-return 56 (i.e. 2*2+4*4+6*6). The same answer should be returned for 
-SumEvenSq(6)*/
+/*Name:Uche Hadassah
+This program calculates the sum of even squares of integers from 0 to n inclusive.*/
 #include<iostream>
 using namespace std;
+int SumEvenSq(int n);
 
-int SumEvenSq(int n)
-{
-	if (n <= 0)
-		return 0;
-	else if (n % 2 == 0)
-		return n * n + SumEvenSq(n - 2);
-	else
-		return SumEvenSq(n - 1);
-}
 int main()
 {
 	int num = 7;
 	cout << "The sum of even squares is:" << SumEvenSq(num);
+}
+
+int SumEvenSq(int n)
+{
+	if (n <= 0)//base case
+		return 0;
+	else if (n % 2 == 0)//if n is even
+		return n * n + SumEvenSq(n - 2);
+	else//if n is not even, it makes it even
+		return SumEvenSq(n - 1);
 }
