@@ -3,7 +3,7 @@ This program prints the letters of the alphabets from 'a' to a given character u
 */
 #include <iostream>
 using namespace std;
-
+void PrintLetters(char ch);
 int main()
 {
 	char alpha = 'd';
