@@ -1,22 +1,22 @@
-/*b) Modify the function above so that it prints the alphabet in reverse starting from the 
-character, all the way back to ‘a’. For example: The call PrintLettersReverse(‘k’) 
-should output: kjihgfedcba*/
+/*Name:Uche Hadassah
+This program prints the letters of the alphabets from a given character to 'a' using a recursive function
+*/
 #include<iostream>
 using namespace std;
-void PrintLetters(char ch);
+void PrintLettersReverse(char ch);//Function prototype
 int main()
 {
 	char alpha = 'd';
-	PrintLetters(alpha);
+	PrintLettersReverse(alpha);
 }
 
-void PrintLetters(char ch)
+void PrintLettersReverse(char ch)
 {
 	if (ch == 'a')//base case
 		cout << ch << ",";
 	else
 	{
 		cout << ch << ",";
-		PrintLetters(ch - 1);
+		PrintLettersReverse(ch - 1);//Recursive call
 	}
 }
