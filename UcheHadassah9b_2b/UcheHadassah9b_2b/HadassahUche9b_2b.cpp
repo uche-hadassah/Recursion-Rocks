@@ -16,7 +16,7 @@ void PrintLetters(char ch)
 		cout << ch << ",";
 	else
 	{
-		PrintLetters(ch - 1);//Accidentally used ch-- previously
 		cout << ch << ",";
+		PrintLetters(ch - 1);
 	}
 }
